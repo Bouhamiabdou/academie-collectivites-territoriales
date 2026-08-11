@@ -1,0 +1,15 @@
+{
+  "name": "academie-collectivites-territoriales",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@netlify/database": "^1"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^3"
+  }
+}

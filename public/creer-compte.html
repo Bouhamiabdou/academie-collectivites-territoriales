@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Créer un compte — Académie des Collectivités Territoriales</title>
+  <meta name="description" content="Créez votre compte personnel sur l'Académie des Collectivités Territoriales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip">Aller au contenu</a>
+
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="utility-left">
+        <a href="tel:+212537000000" class="utility-link">📞 +212 5 37 00 00 00</a>
+        <a href="mailto:contact@academie-ct.ma" class="utility-link">✉️ contact@academie-ct.ma</a>
+      </div>
+      <div class="utility-right">
+        <a href="programme.html" class="utility-link">📖 <span data-i18n="nav.programme">Programme de formation</span></a>
+        <span id="authArea"></span>
+        <button class="lang-toggle" type="button">العربية</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-partners">
+        <img src="images/logo-region-casablanca-settat.png" alt="Région Casablanca-Settat" class="partner-logo" />
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="main-nav">
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+      </div>
+      <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="breadcrumb.home">Accueil</a> / <span data-i18n="auth.register.title">Créer un compte</span>
+      </nav>
+      <h1 data-i18n="auth.register.title">Créer un compte</h1>
+      <p data-i18n="auth.register.desc">Créez votre compte pour vous inscrire aux formations et suivre votre parcours.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrapper">
+        <div class="form-wrap">
+          <p id="registerError" class="form-error"></p>
+          <form id="registerAccountForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="accPrenom" data-i18n="auth.register.firstname">Prénom</label>
+                <input type="text" id="accPrenom" name="prenom" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="accNom" data-i18n="auth.register.lastname">Nom</label>
+                <input type="text" id="accNom" name="nom" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="accEmail" data-i18n="auth.email">Adresse e-mail</label>
+              <input type="email" id="accEmail" name="email" required autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="accProfile" data-i18n="auth.register.profile">Vous êtes</label>
+              <select id="accProfile" name="profile">
+                <option value="elu" data-i18n="auth.register.profile.elu">Élu(e) local(e)</option>
+                <option value="fonctionnaire" data-i18n="auth.register.profile.fonctionnaire">Fonctionnaire territorial(e)</option>
+                <option value="cadre" data-i18n="auth.register.profile.cadre">Cadre de l'administration déconcentrée</option>
+                <option value="autre" data-i18n="auth.register.profile.autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="accCollectivite" data-i18n="auth.register.collectivite">Collectivité / institution</label>
+                <input type="text" id="accCollectivite" name="collectivite" autocomplete="organization" />
+              </div>
+              <div class="form-group">
+                <label for="accPoste" data-i18n="auth.register.poste">Fonction occupée</label>
+                <input type="text" id="accPoste" name="poste" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="accPassword" data-i18n="auth.password">Mot de passe</label>
+                <input type="password" id="accPassword" name="password" required minlength="8" autocomplete="new-password" />
+              </div>
+              <div class="form-group">
+                <label for="accConfirm" data-i18n="auth.register.confirm">Confirmer le mot de passe</label>
+                <input type="password" id="accConfirm" name="confirm" required minlength="8" autocomplete="new-password" />
+              </div>
+            </div>
+            <p class="form-hint" data-i18n="auth.register.password.hint">8 caractères minimum</p>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="auth.register.submit">Créer mon compte</button>
+          </form>
+          <p class="auth-switch">
+            <span data-i18n="auth.register.hasaccount">Déjà un compte ?</span>
+            <a href="connexion.html" data-i18n="auth.register.loginlink">Se connecter</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 data-i18n="footer.about.title">L'Académie</h4>
+        <p data-i18n="footer.about.text">Un dispositif de formation continue dédié aux élus locaux et aux fonctionnaires des collectivités territoriales du Maroc.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.links.title">Liens utiles</h4>
+        <ul>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="inscription.html" data-i18n="nav.register">Inscription</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact.title">Contact</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="mailto:contact@academie-ct.ma">contact@academie-ct.ma</a></li>
+          <li><a href="tel:+212537000000">+212 5 37 00 00 00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Académie des Collectivités Territoriales — <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </footer>
+
+  <script src="js/programme-data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

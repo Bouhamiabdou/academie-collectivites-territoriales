@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendrier des sessions — Académie des Collectivités Territoriales</title>
+  <meta name="description" content="Calendrier des sessions de formation pour les élus et fonctionnaires des collectivités territoriales au Maroc." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip">Aller au contenu</a>
+
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="utility-left">
+        <a href="tel:+212537000000" class="utility-link">📞 +212 5 37 00 00 00</a>
+        <a href="mailto:contact@academie-ct.ma" class="utility-link">✉️ contact@academie-ct.ma</a>
+      </div>
+      <div class="utility-right">
+        <a href="programme.html" class="utility-link">📖 <span data-i18n="nav.programme">Programme de formation</span></a>
+        <span id="authArea"></span>
+        <button class="lang-toggle" type="button">العربية</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-partners">
+        <img src="images/logo-region-casablanca-settat.png" alt="Région Casablanca-Settat" class="partner-logo" />
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="main-nav">
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" aria-current="page" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+      </div>
+      <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="breadcrumb.home">Accueil</a> / <span data-i18n="nav.calendar">Calendrier</span>
+      </nav>
+      <h1 data-i18n="cal.hero.title">Calendrier des sessions</h1>
+      <p data-i18n="cal.hero.desc">Sessions indicatives à venir. Le calendrier est actualisé régulièrement — contactez-nous pour confirmer les dates et les places disponibles.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrapper">
+        <div class="cal-filters">
+          <button type="button" class="cal-filter-btn active" data-filter="all" data-i18n="cal.filter.all">Toutes les sessions</button>
+          <button type="button" class="cal-filter-btn" data-filter="presentiel" data-i18n="cal.filter.presentiel">Présentiel</button>
+          <button type="button" class="cal-filter-btn" data-filter="distance" data-i18n="cal.filter.distance">À distance</button>
+          <button type="button" class="cal-filter-btn" data-filter="hybride" data-i18n="cal.filter.hybride">Hybride</button>
+        </div>
+        <div id="calGrid" class="cal-grid"></div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2 data-i18n="home.cta.title">Prêt à renforcer vos compétences territoriales ?</h2>
+      <p data-i18n="home.cta.desc">Rejoignez une prochaine session de formation ou contactez notre équipe pédagogique pour un accompagnement sur mesure.</p>
+      <div class="cta-actions">
+        <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+        <a href="contact.html" class="btn btn-outline-white" data-i18n="home.cta.btn2">Nous contacter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 data-i18n="footer.about.title">L'Académie</h4>
+        <p data-i18n="footer.about.text">Un dispositif de formation continue dédié aux élus locaux et aux fonctionnaires des collectivités territoriales du Maroc.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.links.title">Liens utiles</h4>
+        <ul>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="inscription.html" data-i18n="nav.register">Inscription</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact.title">Contact</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="mailto:contact@academie-ct.ma">contact@academie-ct.ma</a></li>
+          <li><a href="tel:+212537000000">+212 5 37 00 00 00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Académie des Collectivités Territoriales — <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </footer>
+
+  <script src="js/programme-data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/calendar-data.js"></script>
+  <script src="js/calendar-render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

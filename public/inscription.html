@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription — Académie des Collectivités Territoriales</title>
+  <meta name="description" content="Inscrivez-vous à une session de formation dédiée aux élus et fonctionnaires des collectivités territoriales au Maroc." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip">Aller au contenu</a>
+
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="utility-left">
+        <a href="tel:+212537000000" class="utility-link">📞 +212 5 37 00 00 00</a>
+        <a href="mailto:contact@academie-ct.ma" class="utility-link">✉️ contact@academie-ct.ma</a>
+      </div>
+      <div class="utility-right">
+        <a href="programme.html" class="utility-link">📖 <span data-i18n="nav.programme">Programme de formation</span></a>
+        <span id="authArea"></span>
+        <button class="lang-toggle" type="button">العربية</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-partners">
+        <img src="images/logo-region-casablanca-settat.png" alt="Région Casablanca-Settat" class="partner-logo" />
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="main-nav">
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="inscription.html" class="btn btn-gold" aria-current="page" data-i18n="nav.cta">S'inscrire</a>
+      </div>
+      <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="breadcrumb.home">Accueil</a> / <span data-i18n="nav.register">Inscription</span>
+      </nav>
+      <h1 data-i18n="reg.hero.title">Inscription à une formation</h1>
+      <p data-i18n="reg.hero.desc">Remplissez le formulaire ci-dessous. Notre équipe pédagogique vous recontactera pour confirmer votre inscription.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrapper">
+        <div class="form-wrap">
+          <form id="registerForm" novalidate>
+            <p class="form-section-title" data-i18n="reg.form.identity">Vos informations</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regFirstname" data-i18n="reg.form.firstname">Prénom</label>
+                <input type="text" id="regFirstname" name="firstname" required />
+              </div>
+              <div class="form-group">
+                <label for="regLastname" data-i18n="reg.form.lastname">Nom</label>
+                <input type="text" id="regLastname" name="lastname" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regEmail" data-i18n="reg.form.email">Adresse e-mail</label>
+                <input type="email" id="regEmail" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="regPhone" data-i18n="reg.form.phone">Téléphone</label>
+                <input type="tel" id="regPhone" name="phone" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="regProfile" data-i18n="reg.form.profile">Vous êtes</label>
+              <select id="regProfile" name="profile" required>
+                <option value="elu" data-i18n="reg.form.profile.elu">Élu(e) local(e)</option>
+                <option value="fonctionnaire" data-i18n="reg.form.profile.fonctionnaire">Fonctionnaire territorial(e)</option>
+                <option value="cadre" data-i18n="reg.form.profile.cadre">Cadre de l'administration déconcentrée</option>
+                <option value="autre" data-i18n="reg.form.profile.autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regCollectivite" data-i18n="reg.form.collectivite">Collectivité / institution</label>
+                <input type="text" id="regCollectivite" name="collectivite" required />
+              </div>
+              <div class="form-group">
+                <label for="regPoste" data-i18n="reg.form.poste">Fonction occupée</label>
+                <input type="text" id="regPoste" name="poste" required />
+              </div>
+            </div>
+
+            <p class="form-section-title" data-i18n="reg.form.training">Formation souhaitée</p>
+
+            <div class="form-group">
+              <label for="regSection" data-i18n="reg.form.section">Section du programme</label>
+              <select id="regSection" name="section" required></select>
+            </div>
+
+            <div class="form-group">
+              <label for="regFormat" data-i18n="reg.form.format">Modalité souhaitée</label>
+              <select id="regFormat" name="format" required>
+                <option value="presentiel" data-i18n="reg.form.format.presentiel">Présentiel</option>
+                <option value="distance" data-i18n="reg.form.format.distance">À distance</option>
+                <option value="hybride" data-i18n="reg.form.format.hybride">Hybride</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="regMessage" data-i18n="reg.form.message">Message (facultatif)</label>
+              <textarea id="regMessage" name="message" data-i18n-placeholder="reg.form.message.placeholder" placeholder="Précisez vos besoins ou vos disponibilités…"></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <span class="form-hint" data-i18n="reg.form.required" style="margin:0;">Champs obligatoires</span>
+              <button type="submit" class="btn btn-primary" data-i18n="reg.form.submit">Envoyer ma demande d'inscription</button>
+            </div>
+          </form>
+
+          <div id="registerSuccess" class="form-success">
+            <div class="form-success-icon">&#10003;</div>
+            <h3 data-i18n="reg.success.title">Demande envoyée !</h3>
+            <p data-i18n="reg.success.desc">Merci pour votre inscription. Notre équipe pédagogique vous contactera prochainement pour finaliser votre participation.</p>
+            <a href="index.html" class="btn btn-primary" data-i18n="reg.success.back">Retour à l'accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 data-i18n="footer.about.title">L'Académie</h4>
+        <p data-i18n="footer.about.text">Un dispositif de formation continue dédié aux élus locaux et aux fonctionnaires des collectivités territoriales du Maroc.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.links.title">Liens utiles</h4>
+        <ul>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="inscription.html" data-i18n="nav.register">Inscription</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact.title">Contact</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="mailto:contact@academie-ct.ma">contact@academie-ct.ma</a></li>
+          <li><a href="tel:+212537000000">+212 5 37 00 00 00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Académie des Collectivités Territoriales — <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </footer>
+
+  <script src="js/programme-data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

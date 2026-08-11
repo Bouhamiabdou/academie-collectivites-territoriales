@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propositions — Académie des Collectivités Territoriales</title>
+  <meta name="description" content="Proposez une thématique ou un module de formation à intégrer au programme de l'Académie des Collectivités Territoriales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip">Aller au contenu</a>
+
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="utility-left">
+        <a href="tel:+212537000000" class="utility-link">📞 +212 5 37 00 00 00</a>
+        <a href="mailto:contact@academie-ct.ma" class="utility-link">✉️ contact@academie-ct.ma</a>
+      </div>
+      <div class="utility-right">
+        <a href="programme.html" class="utility-link">📖 <span data-i18n="nav.programme">Programme de formation</span></a>
+        <span id="authArea"></span>
+        <button class="lang-toggle" type="button">العربية</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-partners">
+        <img src="images/logo-region-casablanca-settat.png" alt="Région Casablanca-Settat" class="partner-logo" />
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="main-nav">
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+      </div>
+      <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="breadcrumb.home">Accueil</a> / <span data-i18n="nav.propositions">Propositions</span>
+      </nav>
+      <h1 data-i18n="prop.hero.title">Propositions</h1>
+      <p data-i18n="prop.hero.desc">Vous avez une idée de thématique ou de module à intégrer au programme ? Partagez-la avec notre équipe pédagogique.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrapper">
+        <div class="form-wrap" style="padding:32px;max-width:640px;margin:0 auto;">
+          <p class="form-section-title" data-i18n="prop.form.title">Soumettre une proposition</p>
+          <form id="propositionForm" novalidate>
+            <div class="form-group">
+              <label for="propName" data-i18n="prop.form.name">Nom complet</label>
+              <input type="text" id="propName" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="propEmail" data-i18n="prop.form.email">Adresse e-mail</label>
+              <input type="email" id="propEmail" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="propCollectivite" data-i18n="prop.form.collectivite">Collectivité / institution</label>
+              <input type="text" id="propCollectivite" name="collectivite" />
+            </div>
+            <div class="form-group">
+              <label for="propTheme" data-i18n="prop.form.theme">Thématique proposée</label>
+              <input type="text" id="propTheme" name="theme" required />
+            </div>
+            <div class="form-group">
+              <label for="propMessage" data-i18n="prop.form.message">Description de votre proposition</label>
+              <textarea id="propMessage" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="prop.form.submit">Envoyer la proposition</button>
+          </form>
+
+          <div id="propositionSuccess" class="form-success">
+            <div class="form-success-icon">&#10003;</div>
+            <h3 data-i18n="prop.success.title">Proposition envoyée !</h3>
+            <p data-i18n="prop.success.desc">Merci pour votre contribution. Notre équipe pédagogique l'examinera avec attention.</p>
+            <a href="index.html" class="btn btn-primary" data-i18n="reg.success.back">Retour à l'accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 data-i18n="footer.about.title">L'Académie</h4>
+        <p data-i18n="footer.about.text">Un dispositif de formation continue dédié aux élus locaux et aux fonctionnaires des collectivités territoriales du Maroc.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.links.title">Liens utiles</h4>
+        <ul>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="inscription.html" data-i18n="nav.register">Inscription</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact.title">Contact</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="mailto:contact@academie-ct.ma">contact@academie-ct.ma</a></li>
+          <li><a href="tel:+212537000000">+212 5 37 00 00 00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Académie des Collectivités Territoriales — <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </footer>
+
+  <script src="js/programme-data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
