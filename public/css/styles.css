@@ -137,7 +137,7 @@ button { font-family: inherit; cursor: pointer; }
   flex-shrink: 0;
 }
 .partner-logo { height: 46px; width: auto; object-fit: contain; flex-shrink: 0; display: block; margin: auto 0; transform: translateY(6px); }
-.partner-logo-single { height: 76px; width: auto; object-fit: contain; flex-shrink: 0; display: block; margin: auto 0; }
+.partner-logo-single { height: 64px; width: auto; object-fit: contain; flex-shrink: 0; display: block; margin: auto 0; transform: translateY(-4px); }
 
 .main-nav {
   list-style: none;
