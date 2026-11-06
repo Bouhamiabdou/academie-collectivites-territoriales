@@ -109,6 +109,12 @@ const TRANSLATIONS = {
   "prog.collapse.all": { fr: "Tout replier", ar: "طي الكل" },
   "prog.section.label": { fr: "Section", ar: "القسم" },
   "prog.axes.count": { fr: "axes", ar: "محاور" },
+  "prog.modules.count": { fr: "modules", ar: "وحدات" },
+  "prog.back": { fr: "Retour au programme", ar: "العودة إلى البرنامج" },
+  "prog.prev": { fr: "← Rubrique précédente", ar: "→ القسم السابق" },
+  "prog.next": { fr: "Rubrique suivante →", ar: "القسم التالي ←" },
+  "prog.notfound.title": { fr: "Rubrique introuvable", ar: "القسم غير موجود" },
+  "prog.notfound.desc": { fr: "Cette rubrique n'existe pas. Retournez au programme pour choisir une rubrique.", ar: "هذا القسم غير موجود. عودوا إلى البرنامج لاختيار قسم." },
 
   "cal.hero.title": { fr: "Calendrier des sessions", ar: "تقويم الدورات" },
   "cal.hero.desc": { fr: "Sessions indicatives à venir. Le calendrier est actualisé régulièrement — contactez-nous pour confirmer les dates et les places disponibles.", ar: "دورات إخبارية قادمة. يتم تحديث التقويم بانتظام — تواصلوا معنا لتأكيد التواريخ والأماكن المتاحة." },

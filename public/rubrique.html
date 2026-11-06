@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rubrique du programme — Académie des Collectivités Territoriales</title>
+  <meta name="description" content="Détail d'une rubrique du programme de formation : axes et modules." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip">Aller au contenu</a>
+
+  <div class="utility-bar">
+    <div class="utility-inner">
+      <div class="utility-left">
+        <a href="tel:066061626364" class="utility-link">📞 06 60 61 62 63 64</a>
+        <a href="mailto:contact@academie-ct.ma" class="utility-link">✉️ contact@academie-ct.ma</a>
+      </div>
+      <div class="utility-right">
+        <a href="programme.html" class="utility-link">📖 <span data-i18n="nav.programme">Programme de formation</span></a>
+        <span id="authArea"></span>
+        <button class="lang-toggle" type="button">العربية</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-partners">
+        <img src="images/logo-region-casablanca-settat.png" alt="Région Casablanca-Settat" class="partner-logo" />
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="main-nav">
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <img src="images/logo-fsjes-casablanca.png" alt="FSJES Casablanca" class="partner-logo-single" />
+        <a href="inscription.html" class="btn btn-gold" data-i18n="nav.cta">S'inscrire</a>
+      </div>
+      <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="breadcrumb.home">Accueil</a> / <a href="programme.html" data-i18n="nav.programme">Programme de formation</a> / <span id="rubCrumb"></span>
+      </nav>
+      <p class="rub-kicker" id="rubKicker"></p>
+      <h1 id="rubTitle"></h1>
+      <p id="rubMeta"></p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrapper">
+        <div id="rubBody" class="rub-body"></div>
+        <nav class="rub-nav" aria-label="Navigation entre rubriques">
+          <a id="rubPrev" class="btn btn-outline rub-nav-prev" href="#"></a>
+          <a href="programme.html" class="btn btn-primary" data-i18n="prog.back">Retour au programme</a>
+          <a id="rubNext" class="btn btn-outline rub-nav-next" href="#"></a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2 data-i18n="home.cta.title">Prêt à renforcer vos compétences territoriales ?</h2>
+      <p data-i18n="home.cta.desc">Rejoignez une prochaine session de formation ou contactez notre équipe pédagogique pour un accompagnement sur mesure.</p>
+      <div class="cta-actions">
+        <a href="calendrier.html" class="btn btn-gold" data-i18n="home.cta.btn1">Voir le calendrier</a>
+        <a href="inscription.html" class="btn btn-outline-white" data-i18n="nav.cta">S'inscrire</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 data-i18n="footer.about.title">L'Académie</h4>
+        <p data-i18n="footer.about.text">Un dispositif de formation continue dédié aux élus locaux et aux fonctionnaires des collectivités territoriales du Maroc.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.links.title">Liens utiles</h4>
+        <ul>
+          <li><a href="programme.html" data-i18n="nav.programme">Programme de formation</a></li>
+          <li><a href="calendrier.html" data-i18n="nav.calendar">Calendrier</a></li>
+          <li><a href="inscription.html" data-i18n="nav.register">Inscription</a></li>
+          <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact.title">Contact</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="mailto:contact@academie-ct.ma">contact@academie-ct.ma</a></li>
+          <li><a href="tel:066061626364">06 60 61 62 63 64</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Académie des Collectivités Territoriales — <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </footer>
+
+  <script src="js/programme-data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/programme-render.js"></script>
+  <script src="js/rubrique-render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,78 +1,36 @@
-/* Rendu des rubriques du programme et des mini-cartes de l'accueil */
+/* Rendu de la grille des rubriques du programme et des mini-cartes de l'accueil */
 
 function axeLabel(count, lang) {
   if (lang === "ar") return TRANSLATIONS["prog.axes.count"][lang];
   return count === 1 ? "axe" : "axes";
 }
 
-function renderProgrammeAccordion() {
+function moduleLabel(count, lang) {
+  if (lang === "ar") return TRANSLATIONS["prog.modules.count"][lang];
+  return count === 1 ? "module" : "modules";
+}
+
+function renderProgrammeGrid() {
   const container = document.getElementById("programmeList");
   if (!container) return;
   const lang = getLang();
-  const empty = document.getElementById("progEmpty");
 
   container.innerHTML = "";
   PROGRAMME.forEach((section, si) => {
-    const secEl = document.createElement("div");
-    secEl.className = "prog-section";
-    secEl.dataset.index = String(si);
-
-    const searchText = buildSearchText(section);
-    secEl.dataset.search = searchText.toLowerCase();
-
-    const toggle = document.createElement("button");
-    toggle.className = "prog-mini-card prog-section-toggle";
-    toggle.id = `section-toggle-${si + 1}`;
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-controls", `section-body-${si + 1}`);
-    toggle.innerHTML = `
+    const card = document.createElement("a");
+    card.className = "prog-mini-card prog-section";
+    card.href = `rubrique.html?s=${si + 1}`;
+    card.dataset.search = buildSearchText(section).toLowerCase();
+    card.innerHTML = `
       <span class="prog-mini-num">${String(si + 1).padStart(2, "0")}</span>
       <span class="prog-mini-title">${lang === "ar" ? section.ar : section.fr}</span>
       <span class="prog-mini-count">${section.axes.length} ${axeLabel(section.axes.length, lang)}</span>
     `;
-
-    const body = document.createElement("div");
-    body.className = "prog-section-body";
-    body.id = `section-body-${si + 1}`;
-    body.hidden = true;
-    body.innerHTML = section.axes
-      .map(
-        (axe) => `
-        <div class="prog-axe">
-          <h4>${lang === "ar" ? axe.ar : axe.fr}</h4>
-          <ul>
-            ${axe.items.map((it) => `<li>${lang === "ar" ? it.ar : it.fr}</li>`).join("")}
-          </ul>
-        </div>
-      `
-      )
-      .join("");
-
-    toggle.addEventListener("click", () => {
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!expanded));
-      body.hidden = expanded;
-    });
-
-    secEl.appendChild(toggle);
-    secEl.appendChild(body);
-    container.appendChild(secEl);
+    container.appendChild(card);
   });
 
-  if (location.hash.startsWith("#s")) {
-    const idx = parseInt(location.hash.replace("#s", ""), 10) - 1;
-    const target = container.querySelector(`[data-index="${idx}"]`);
-    if (target) {
-      const t = target.querySelector(".prog-section-toggle");
-      t.setAttribute("aria-expanded", "true");
-      target.querySelector(".prog-section-body").hidden = false;
-      setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
-    }
-  }
-
   const search = document.getElementById("progSearch");
-  if (search && search.value.trim()) filterProgramme(search.value);
-  if (empty) empty.style.display = "none";
+  filterProgramme(search ? search.value : "");
 }
 
 function buildSearchText(section) {
@@ -92,11 +50,6 @@ function filterProgramme(query) {
     const match = !q || el.dataset.search.includes(q);
     el.style.display = match ? "" : "none";
     if (match) visibleCount++;
-    if (match && q) {
-      const toggle = el.querySelector(".prog-section-toggle");
-      toggle.setAttribute("aria-expanded", "true");
-      el.querySelector(".prog-section-body").hidden = false;
-    }
   });
   const empty = document.getElementById("progEmpty");
   if (empty) empty.style.display = visibleCount === 0 ? "block" : "none";
@@ -108,7 +61,7 @@ function renderProgrammeMiniCards() {
   const lang = getLang();
   const sectionsHtml = PROGRAMME.map(
     (section, si) => `
-    <a class="prog-mini-card" href="programme.html#s${si + 1}">
+    <a class="prog-mini-card" href="rubrique.html?s=${si + 1}">
       <span class="prog-mini-num">${String(si + 1).padStart(2, "0")}</span>
       <span>
         <p class="prog-mini-title">${lang === "ar" ? section.ar : section.fr}</p>
@@ -139,13 +92,19 @@ function renderProgrammeStats() {
 }
 
 function renderAll() {
-  renderProgrammeAccordion();
+  renderProgrammeGrid();
   renderProgrammeMiniCards();
   renderProgrammeStats();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderAll();
+  // Anciens liens programme.html#sN : redirection vers la page de la rubrique
+  const legacy = location.hash.match(/^#s(\d+)$/);
+  if (legacy && document.getElementById("programmeList")) {
+    location.replace("rubrique.html?s=" + legacy[1]);
+    return;
+  }
+
   const search = document.getElementById("progSearch");
   if (search) {
     search.addEventListener("input", (e) => filterProgramme(e.target.value));
@@ -154,25 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
       search.value = q;
       filterProgramme(q);
     }
-  }
-
-  const expandAll = document.getElementById("progExpandAll");
-  const collapseAll = document.getElementById("progCollapseAll");
-  if (expandAll) {
-    expandAll.addEventListener("click", () => {
-      document.querySelectorAll("#programmeList .prog-section-toggle").forEach((t) => {
-        t.setAttribute("aria-expanded", "true");
-        t.parentElement.querySelector(".prog-section-body").hidden = false;
-      });
-    });
-  }
-  if (collapseAll) {
-    collapseAll.addEventListener("click", () => {
-      document.querySelectorAll("#programmeList .prog-section-toggle").forEach((t) => {
-        t.setAttribute("aria-expanded", "false");
-        t.parentElement.querySelector(".prog-section-body").hidden = true;
-      });
-    });
   }
 });
 
