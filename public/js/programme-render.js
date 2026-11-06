@@ -1,4 +1,4 @@
-/* Rendu de l'accordéon du programme (page programme.html) + mini-cartes (page index.html) */
+/* Rendu des rubriques du programme et des mini-cartes de l'accueil */
 
 function axeLabel(count, lang) {
   if (lang === "ar") return TRANSLATIONS["prog.axes.count"][lang];
@@ -21,17 +21,19 @@ function renderProgrammeAccordion() {
     secEl.dataset.search = searchText.toLowerCase();
 
     const toggle = document.createElement("button");
-    toggle.className = "prog-section-toggle";
+    toggle.className = "prog-mini-card prog-section-toggle";
+    toggle.id = `section-toggle-${si + 1}`;
     toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", `section-body-${si + 1}`);
     toggle.innerHTML = `
-      <span class="prog-section-num">${String(si + 1).padStart(2, "0")}</span>
-      <span class="prog-section-title">${lang === "ar" ? section.ar : section.fr}</span>
-      <span class="prog-section-count">${section.axes.length} ${axeLabel(section.axes.length, lang)}</span>
-      <span class="prog-chevron">&#9662;</span>
+      <span class="prog-mini-num">${String(si + 1).padStart(2, "0")}</span>
+      <span class="prog-mini-title">${lang === "ar" ? section.ar : section.fr}</span>
+      <span class="prog-mini-count">${section.axes.length} ${axeLabel(section.axes.length, lang)}</span>
     `;
 
     const body = document.createElement("div");
     body.className = "prog-section-body";
+    body.id = `section-body-${si + 1}`;
     body.hidden = true;
     body.innerHTML = section.axes
       .map(
