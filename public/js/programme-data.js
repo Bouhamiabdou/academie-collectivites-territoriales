@@ -1,18 +1,41 @@
-/* Données du programme de formation — 20 sections, 30 axes, 94 modules */
+/* Données du programme de formation — 22 sections, 31 axes, 99 modules */
 const PROGRAMME = [
   {
-    fr: "Cadre juridique général et principes constitutionnels de la décentralisation",
-    ar: "الإطار القانوني العام والمبادئ الدستورية للامركزية",
+    fr: "Discours royaux et orientations stratégiques pour les collectivités territoriales",
+    ar: "الخطب الملكية والتوجهات الاستراتيجية للجماعات الترابية",
     axes: [
       {
-        fr: "Lois organiques relatives aux collectivités territoriales",
-        ar: "القوانين التنظيمية للجماعات الترابية",
+        fr: "Orientations royales sur la décentralisation et le développement territorial",
+        ar: "التوجهات الملكية بشأن اللامركزية والتنمية الترابية",
+        items: [
+          { fr: "La régionalisation avancée et le renforcement de la gouvernance territoriale", ar: "الجهوية المتقدمة وتعزيز الحكامة الترابية" },
+          { fr: "La justice spatiale et la réduction des disparités entre les territoires", ar: "العدالة المجالية والحد من الفوارق بين المجالات الترابية" },
+          { fr: "Le développement humain et l'amélioration des services publics de proximité", ar: "التنمية البشرية وتحسين الخدمات العمومية للقرب" },
+          { fr: "La participation citoyenne et l'implication des acteurs locaux", ar: "المشاركة المواطنة وإشراك الفاعلين المحليين" },
+          { fr: "La mise en œuvre des orientations royales dans les politiques territoriales", ar: "تنزيل التوجيهات الملكية في السياسات الترابية" }
+        ]
+      }
+    ]
+  },
+  {
+    fr: "Lois organiques des collectivités territoriales",
+    ar: "القوانين التنظيمية للجماعات الترابية",
+    axes: [
+      {
+        fr: "Cadre et compétences définis par les lois organiques n° 111.14, 112.14 et 113.14",
+        ar: "الإطار والاختصاصات المحددة بموجب القوانين التنظيمية 111.14 و112.14 و113.14",
         items: [
           { fr: "Étude de la loi organique n° 113.14 relative aux communes", ar: "دراسة القانون التنظيمي 113.14 المتعلق بالجماعات" },
           { fr: "Étude de la loi organique n° 112.14 relative aux préfectures et provinces", ar: "دراسة القانون التنظيمي 112.14 المتعلق بالعمالات والأقاليم" },
           { fr: "Étude de la loi organique n° 111.14 relative aux régions", ar: "دراسة القانون التنظيمي 111.14 المتعلق بالجهات" }
         ]
-      },
+      }
+    ]
+  },
+  {
+    fr: "Cadre juridique général et principes constitutionnels de la décentralisation",
+    ar: "الإطار القانوني العام والمبادئ الدستورية للامركزية",
+    axes: [
       {
         fr: "Principes de décentralisation et de déconcentration administrative",
         ar: "مبادئ اللامركزية واللاتمركز الإداري",

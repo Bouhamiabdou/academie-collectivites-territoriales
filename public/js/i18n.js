@@ -78,7 +78,7 @@ const TRANSLATIONS = {
   "home.why.item5": { fr: "Développer une vision stratégique du développement territorial durable", ar: "تطوير رؤية استراتيجية للتنمية الترابية المستدامة" },
 
   "home.programme.label": { fr: "Programme", ar: "البرنامج" },
-  "home.programme.title": { fr: "Aperçu des 20 sections du programme", ar: "لمحة عن أقسام البرنامج العشرين" },
+  "home.programme.title": { fr: "Aperçu des 22 sections du programme", ar: "لمحة عن أقسام البرنامج الاثنين والعشرين" },
   "home.programme.desc": { fr: "Chaque section regroupe plusieurs axes de formation et modules pratiques. Cliquez pour explorer le programme complet.", ar: "يضم كل قسم عدة محاور تكوينية ووحدات تطبيقية. اضغط لاستكشاف البرنامج الكامل." },
   "home.programme.more": { fr: "Voir le programme complet", ar: "مشاهدة البرنامج الكامل" },
   "home.programme.axes": { fr: "axes", ar: "محاور" },
@@ -102,7 +102,7 @@ const TRANSLATIONS = {
   "breadcrumb.home": { fr: "Accueil", ar: "الرئيسية" },
 
   "prog.hero.title": { fr: "Programme de formation", ar: "برنامج التكوين" },
-  "prog.hero.desc": { fr: "20 sections, 30 axes et 94 modules couvrant l'ensemble des compétences de la gestion territoriale, du cadre juridique à l'évaluation des politiques publiques.", ar: "20 قسماً و30 محوراً و94 وحدة تغطي مجموع الكفاءات المرتبطة بالتدبير الترابي، من الإطار القانوني إلى تقييم السياسات العمومية." },
+  "prog.hero.desc": { fr: "22 sections, 31 axes et 99 modules couvrant l'ensemble des compétences de la gestion territoriale, des discours royaux à l'évaluation des politiques publiques.", ar: "22 قسماً و31 محوراً و99 وحدة تغطي مجموع الكفاءات المرتبطة بالتدبير الترابي، من الخطب الملكية إلى تقييم السياسات العمومية." },
   "prog.search.placeholder": { fr: "Rechercher un module, un axe, une section…", ar: "ابحث عن وحدة أو محور أو قسم…" },
   "prog.search.empty": { fr: "Aucun résultat pour cette recherche.", ar: "لا توجد نتائج لهذا البحث." },
   "prog.expand.all": { fr: "Tout déplier", ar: "فتح الكل" },
@@ -153,7 +153,7 @@ const TRANSLATIONS = {
   "about.mission.label": { fr: "Notre mission", ar: "مهمتنا" },
   "about.mission.title": { fr: "Accompagner la montée en compétence des acteurs territoriaux", ar: "مواكبة الارتقاء بكفاءات الفاعلين الترابيين" },
   "about.mission.text1": { fr: "Depuis l'entrée en vigueur des lois organiques relatives aux collectivités territoriales, les élus et les fonctionnaires territoriaux sont appelés à exercer des responsabilités élargies dans des domaines juridiques, financiers, techniques et stratégiques toujours plus exigeants.", ar: "منذ دخول القوانين التنظيمية المتعلقة بالجماعات الترابية حيز التنفيذ، أصبح المنتخبون والموظفون الترابيون مطالبين بممارسة مسؤوليات موسعة في مجالات قانونية ومالية وتقنية واستراتيجية متزايدة التعقيد." },
-  "about.mission.text2": { fr: "Notre programme de formation, structuré en 20 sections et 30 axes thématiques, vise à outiller ces acteurs pour une gestion territoriale efficace, transparente et durable, au bénéfice des citoyens et des territoires.", ar: "يهدف برنامجنا التكويني، المهيكل في 20 قسماً و30 محوراً موضوعاتياً، إلى تزويد هؤلاء الفاعلين بالأدوات اللازمة لتدبير ترابي فعال وشفاف ومستدام، لفائدة المواطنين والترابيات." },
+  "about.mission.text2": { fr: "Notre programme de formation, structuré en 22 sections et 31 axes thématiques, vise à outiller ces acteurs pour une gestion territoriale efficace, transparente et durable, au bénéfice des citoyens et des territoires.", ar: "يهدف برنامجنا التكويني، المهيكل في 22 قسماً و31 محوراً موضوعاتياً، إلى تزويد هؤلاء الفاعلين بالأدوات اللازمة لتدبير ترابي فعال وشفاف ومستدام، لفائدة المواطنين والترابيات." },
   "about.objectives.label": { fr: "Objectifs pédagogiques", ar: "الأهداف البيداغوجية" },
   "about.obj1.title": { fr: "Maîtrise juridique", ar: "التمكن القانوني" },
   "about.obj1.desc": { fr: "Comprendre et appliquer le cadre légal et réglementaire de la décentralisation.", ar: "فهم وتطبيق الإطار القانوني والتنظيمي للامركزية." },
